@@ -1,0 +1,17 @@
+.header {
+    display:flex;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+}
+
+.column{
+    flex: 1;
+}
+
+.row {
+    flex: 1;
+    background: yellow;
+}
