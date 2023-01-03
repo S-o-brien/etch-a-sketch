@@ -1,24 +1,18 @@
+const grid = document.getElementById(".eContainer")
 
-
-//create column and row number vars
-var columns = 4;
-var rows = 4;
-
-//creating div container within html for grid
-
-
-var grid = document.createElement('div');
-grid.className = 'grid';
-
-for (var i = 0; i <columns; ++i) {
-    var column = document.createElement('div'); // create column
-    column.className = 'column'; //assigning class name
-    for (var j =0; j < rows; ++j) {
-        var row = document.createElement('div'); //create row
-        row.className = 'row';
-        row.textContent = i + '-' +j;
-        column.appendChild(row); //append row in column
+function createGrid() {
+    for (let i = 0; i < 256; i++) {
+        const div = document.createElement("div");
+        div.classList.add("square");
+        eContainer.appendChild(div);
     }
-    grid.appendChild(column);
-    }
-    document.body.appendChild(grid);
+};
+
+const square = document.querySelector("div");
+square.addEventListener("mouseover", function(event) {
+    event.target.classList.replace("square", "color");
+});
+
+console.log(square)
+
+createGrid();
